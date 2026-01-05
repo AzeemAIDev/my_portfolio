@@ -70,7 +70,7 @@ ScrollReveal().reveal('.home-content p, .about-content, ', { origin: 'right' });
 // });
 var options = {
       // 1. Target the element ID used in your HTML
-      strings: ['Web Developer', 'Digital Marketer', 'Freelancer', ], 
+      strings: ['Machine Learning Engineer', 'Freelancer', "AI Aesthetic"], 
       typeSpeed: 100, // Speed of typing
       backSpeed: 100, // Speed of deleting
       backDelay: 1000,
