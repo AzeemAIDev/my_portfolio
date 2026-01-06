@@ -173,6 +173,8 @@ span {
 
 .about-img img {
     width: 35vw;
+    height: auto;
+    object-fit: cover;
 } 
 
 .heading {
@@ -250,14 +252,11 @@ span {
     gap: 2.5rem;
 }
 
-/* Portfolio Section Images Uniform Size Fix */
-/* --- Portfolio Section Final Fix --- */
-
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
-    align-items: start; /* Boxes ko ek line mein rakhne ke liye */
+    align-items: start; 
 }
 
 .portfolio-box {
@@ -266,13 +265,13 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-    aspect-ratio: 16 / 11; /* Tamam images ka size ek jaisa karne ke liye */
+    aspect-ratio: 16 / 11; 
 }
 
 .portfolio-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Image ko box mein fit karne ke liye */
+    object-fit: cover; 
     transition: .5s ease;
 }
 
@@ -286,7 +285,6 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Dark background taake text clear nazar aaye */
     background: linear-gradient(rgba(0, 0, 0, 0.8), var(--main-color));
     display: flex;
     justify-content: center;
@@ -294,24 +292,23 @@ span {
     flex-direction: column;
     text-align: center;
     padding: 0 2rem;
-    /* Hover effect fix */
     transform: translateY(100%);
     transition: .5s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
-    transform: translateY(0); /* Hover karne par text upar aayega */
+    transform: translateY(0); 
 }
 
 .portfolio-layer h4 {
     font-size: 2.3rem;
-    color: #fff; /* White color for clarity */
+    color: #fff; 
     font-weight: 700;
 }
 
 .portfolio-layer p {
     font-size: 2.0rem;
-    color: #eee; /* Light grey/white for readability */
+    color: #eee; 
     margin: .5rem 0 1rem;
     line-height: 1.3;
 }
@@ -331,7 +328,6 @@ span {
     color: var(--second-bg-color);
 }
 
-/* Mobile responsive fix */
 @media (max-width: 768px) {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
@@ -397,7 +393,6 @@ span {
 .footer-iconTop a:hover { box-shadow: 0 0 1rem var(--main-color); }
 .footer-iconTop a i { font-size: 2.4rem; color: var(--second-bg-color); }
 
-/* Skills Section Styles */
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 .skills-section h1 { text-align: center; font-size: 3em; margin-bottom: 60px; color:  #0ef; }
 .skills-content { display: flex; justify-content: space-between; gap: 40px; }
@@ -417,7 +412,6 @@ span {
 .circle-percent { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.5em; font-weight: bold; }
 .circle-name { display: block; font-size: 1.4rem; text-align: center; }
 
-/* BreakPoints */
 @media (max-width: 1200px) { html { font-size: 55%; } }
 @media (max-width: 991px) {
     .header { padding: 2rem 3%; }
@@ -440,29 +434,17 @@ span {
     }
     .navbar.active { display: flex; }
     .navbar a { display: block; font-size: 2rem; margin: 1.5rem 0; margin-left: 0; }
-.home {
-        flex-direction: column !important; /* Forcefully column mein karega */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: auto;
-        padding-top: 12rem; /* Header se niche karne ke liye */
-    }
-
+    .home { flex-direction: column; }
     .home-content {
-        order: 1; /* Text ko pehle dikhayega */
-        margin-bottom: 5rem; /* YE LINE BUTTON AUR IMAGE MEIN GAP LAYEGI */
+        margin-bottom: 5rem; 
     }
-
-    .home-img {
-        order: 2; /* Image ko niche dikhayega */
-    }
-
-    .home-img img {
-        width: 70vw;
-        margin-top: 2rem;
-    }
+    .home-content h3 { font-size: 2.6rem; }
+    .home-img img { width: 70vw; margin-top: 4rem; }
+    
+    /* Image ko about content ke niche lane ke liye direction change ki hai */
+    .about { flex-direction: column; } 
+    .about img { width: 80vw; height: auto; object-fit: contain; margin-top: 2rem; }
+    
     .portfolio-container { grid-template-columns: repeat(2, 1fr); }
     .skills-content { flex-direction: column; }
     .skills-column { width: 100%; }
