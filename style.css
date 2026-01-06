@@ -441,30 +441,27 @@ span {
     .navbar.active { display: flex; }
     .navbar a { display: block; font-size: 2rem; margin: 1.5rem 0; margin-left: 0; }
 .home {
-        flex-direction: column; /* !important hata dein aur sirf column rehne dein */
+        flex-direction: column !important; /* Forcefully column mein karega */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         height: auto;
-        padding-top: 15rem; /* Isay 15rem kar dein taake text header se niche ho jaye */
-        gap: 2rem;
+        padding-top: 12rem; /* Header se niche karne ke liye */
     }
 
     .home-content {
-        /* order: 1;  <-- Is line ko delete kar dein */
-        margin-bottom: 2rem; 
+        order: 1; /* Text ko pehle dikhayega */
+        margin-bottom: 5rem; /* YE LINE BUTTON AUR IMAGE MEIN GAP LAYEGI */
     }
 
     .home-img {
-        /* order: 2;  <-- Is line ko bhi delete kar dein */
+        order: 2; /* Image ko niche dikhayega */
     }
 
     .home-img img {
         width: 70vw;
         margin-top: 2rem;
-        height: auto; /* Stretch hone se bachane ke liye */
-    }
     }
     .portfolio-container { grid-template-columns: repeat(2, 1fr); }
     .skills-content { flex-direction: column; }
