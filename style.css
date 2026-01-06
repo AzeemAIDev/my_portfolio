@@ -440,15 +440,29 @@ span {
     }
     .navbar.active { display: flex; }
     .navbar a { display: block; font-size: 2rem; margin: 1.5rem 0; margin-left: 0; }
-    .home { flex-direction: column; }
-    .home-content {
-        margin-bottom: 5rem; /* Ye button ko image se kaafi door kar dega */
+.home {
+        flex-direction: column !important; /* Forcefully column mein karega */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding-top: 12rem; /* Header se niche karne ke liye */
     }
-    /* .home-content .btn { margin-bottom: 4rem; } */
-    .home-content h3 { font-size: 2.6rem; }
-    .home-img img { width: 70vw; margin-top: 4rem; }
-    .about { flex-direction: column-reverse; }
-    .about img { width: 70vw; margin-top: 4rem; }
+
+    .home-content {
+        order: 1; /* Text ko pehle dikhayega */
+        margin-bottom: 5rem; /* YE LINE BUTTON AUR IMAGE MEIN GAP LAYEGI */
+    }
+
+    .home-img {
+        order: 2; /* Image ko niche dikhayega */
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 2rem;
+    }
     .portfolio-container { grid-template-columns: repeat(2, 1fr); }
     .skills-content { flex-direction: column; }
     .skills-column { width: 100%; }
