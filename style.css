@@ -455,20 +455,12 @@ span {
         margin-bottom: 5rem; /* YE LINE BUTTON AUR IMAGE MEIN GAP LAYEGI */
     }
 
+    .home-img {
+        order: 2; /* Image ko niche dikhayega */
+    }
+
     .home-img img {
         width: 70vw;
-        margin-top: 2rem;
-    }
-
-    /* --- YE WALA HISSA YAHAN ADD KAREIN --- */
-    .about {
-        flex-direction: column-reverse; /* Text upar aur pic niche */
-        gap: 3rem;
-    }
-
-    .about-img img {
-        width: 80vw;
-        height: auto !important; /* !important lagane se pic lambi nahi hogi */
         margin-top: 2rem;
     }
     .portfolio-container { grid-template-columns: repeat(2, 1fr); }
