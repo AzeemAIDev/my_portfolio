@@ -173,8 +173,6 @@ span {
 
 .about-img img {
     width: 35vw;
-    height: auto;
-    object-fit: cover;
 } 
 
 .heading {
@@ -252,11 +250,14 @@ span {
     gap: 2.5rem;
 }
 
+/* Portfolio Section Images Uniform Size Fix */
+/* --- Portfolio Section Final Fix --- */
+
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
-    align-items: start; 
+    align-items: start; /* Boxes ko ek line mein rakhne ke liye */
 }
 
 .portfolio-box {
@@ -265,13 +266,13 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-    aspect-ratio: 16 / 11; 
+    aspect-ratio: 16 / 11; /* Tamam images ka size ek jaisa karne ke liye */
 }
 
 .portfolio-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover; /* Image ko box mein fit karne ke liye */
     transition: .5s ease;
 }
 
@@ -285,6 +286,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
+    /* Dark background taake text clear nazar aaye */
     background: linear-gradient(rgba(0, 0, 0, 0.8), var(--main-color));
     display: flex;
     justify-content: center;
@@ -292,23 +294,24 @@ span {
     flex-direction: column;
     text-align: center;
     padding: 0 2rem;
+    /* Hover effect fix */
     transform: translateY(100%);
     transition: .5s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
-    transform: translateY(0); 
+    transform: translateY(0); /* Hover karne par text upar aayega */
 }
 
 .portfolio-layer h4 {
     font-size: 2.3rem;
-    color: #fff; 
+    color: #fff; /* White color for clarity */
     font-weight: 700;
 }
 
 .portfolio-layer p {
     font-size: 2.0rem;
-    color: #eee; 
+    color: #eee; /* Light grey/white for readability */
     margin: .5rem 0 1rem;
     line-height: 1.3;
 }
@@ -328,6 +331,7 @@ span {
     color: var(--second-bg-color);
 }
 
+/* Mobile responsive fix */
 @media (max-width: 768px) {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
@@ -393,6 +397,7 @@ span {
 .footer-iconTop a:hover { box-shadow: 0 0 1rem var(--main-color); }
 .footer-iconTop a i { font-size: 2.4rem; color: var(--second-bg-color); }
 
+/* Skills Section Styles */
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 .skills-section h1 { text-align: center; font-size: 3em; margin-bottom: 60px; color:  #0ef; }
 .skills-content { display: flex; justify-content: space-between; gap: 40px; }
@@ -412,6 +417,7 @@ span {
 .circle-percent { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.5em; font-weight: bold; }
 .circle-name { display: block; font-size: 1.4rem; text-align: center; }
 
+/* BreakPoints */
 @media (max-width: 1200px) { html { font-size: 55%; } }
 @media (max-width: 991px) {
     .header { padding: 2rem 3%; }
@@ -436,15 +442,13 @@ span {
     .navbar a { display: block; font-size: 2rem; margin: 1.5rem 0; margin-left: 0; }
     .home { flex-direction: column; }
     .home-content {
-        margin-bottom: 5rem; 
+        margin-bottom: 5rem; /* Ye button ko image se kaafi door kar dega */
     }
+    /* .home-content .btn { margin-bottom: 4rem; } */
     .home-content h3 { font-size: 2.6rem; }
     .home-img img { width: 70vw; margin-top: 4rem; }
-    
-    /* Image ko about content ke niche lane ke liye direction change ki hai */
-    .about { flex-direction: column; } 
-    .about img { width: 80vw; height: auto; object-fit: contain; margin-top: 2rem; }
-    
+    .about { flex-direction: column-reverse; }
+    .about img { width: 70vw; margin-top: 4rem; }
     .portfolio-container { grid-template-columns: repeat(2, 1fr); }
     .skills-content { flex-direction: column; }
     .skills-column { width: 100%; }
